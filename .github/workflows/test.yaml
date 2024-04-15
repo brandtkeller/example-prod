@@ -14,4 +14,15 @@ jobs:
       - name: Setup K3d
         uses: ./.github/actions/k3d
 
+      - name: Install Zarf
+        uses: defenseunicorns/setup-zarf@v1
+        with:
+          version: v0.33.0
+
+      - name: Deploy the package in a connected environment
+        run: zarf dev deploy
+
+      - name: Check on the environment
+        run: zarf tools kubectl get pods -A
+
       
