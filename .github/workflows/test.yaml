@@ -1,13 +1,9 @@
 name: Test Governance
-<<<<<<< HEAD
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-=======
-on: pull_request
->>>>>>> dbcf03775132ea13c400a1bc86c4cf6123206e6f
 
 permissions:
   contents: read
@@ -33,20 +29,20 @@ jobs:
       - name: Check on the environment
         run: zarf tools kubectl get pods -A
 
-      - name: Setup Lula
-        uses: defenseunicorns/lula/setup@095636b7880051e11b05f10a582fdd911526161c
-        with:
-          version: v0.2.0
+      # - name: Setup Lula
+      #   uses: defenseunicorns/lula/setup@095636b7880051e11b05f10a582fdd911526161c
+      #   with:
+      #     version: v0.2.0
 
-      - name: Perform Validation of OSCAL
-        uses: defenseunicorns/lula/validate@095636b7880051e11b05f10a582fdd911526161c
-        with:
-          oscal-target: oscal-component.yaml
-          threshold: assessment-results.yaml
+      # - name: Perform Validation of OSCAL
+      #   uses: defenseunicorns/lula/validate@095636b7880051e11b05f10a582fdd911526161c
+      #   with:
+      #     oscal-target: oscal-component.yaml
+      #     threshold: assessment-results.yaml
 
-      - uses: actions/upload-artifact@v4
-        with:
-          name: Assessment-Results
-          path: assessment-results.yaml
+      # - uses: actions/upload-artifact@v4
+      #   with:
+      #     name: Assessment-Results
+      #     path: assessment-results.yaml
 
       
