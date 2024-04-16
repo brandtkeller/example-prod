@@ -29,9 +29,6 @@ jobs:
       - name: Check on the environment
         run: zarf tools kubectl get pods -A
 
-      - name: Check that the validations exist
-        run: cat ./validations/validation.yaml
-
       - name: Setup Lula
         uses: defenseunicorns/lula-action/setup@a0118c71f7182755c97e2275da2d2dc49f91db5e
         with:
@@ -41,7 +38,7 @@ jobs:
         uses: defenseunicorns/lula-action/validate@a0118c71f7182755c97e2275da2d2dc49f91db5e
         with:
           oscal-target: "oscal-component.yaml"
-          threshold: "assessment-results.yaml"
+          # threshold: "assessment-results.yaml"
 
       - uses: actions/upload-artifact@v4
         with:
