@@ -30,12 +30,12 @@ jobs:
         run: zarf tools kubectl get pods -A
 
       - name: Setup Lula
-        uses: defenseunicorns/lula-action/setup@ab4323ae76627e708b9fb386f8a69743b8858e29
+        uses: defenseunicorns/lula-action/setup@a0118c71f7182755c97e2275da2d2dc49f91db5e
         with:
           version: v0.2.1
 
       - name: Perform Validation of OSCAL
-        uses: defenseunicorns/lula-action/validate@ab4323ae76627e708b9fb386f8a69743b8858e29
+        uses: defenseunicorns/lula-action/validate@a0118c71f7182755c97e2275da2d2dc49f91db5e
         with:
           oscal-target: "oscal-component.yaml"
           threshold: "assessment-results.yaml"
