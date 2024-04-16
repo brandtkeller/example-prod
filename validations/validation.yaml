@@ -33,7 +33,7 @@ provider:
       }
 
       allowed_pod(pod) {
-        exempt := {"kube-system", "istio-system", "istio-operator", "flux-system", "kyverno"}
+        exempt := {"kube-system", "istio-system"}
         pod.metadata.namespace in exempt
       }
 

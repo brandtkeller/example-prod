@@ -12,7 +12,7 @@ This repository represents an example of how you would automate governance in a 
 ### Demo Workflows
 
 #### Setup the initial workflows
-- Review the repository on GitHub (previous )
+- Review the repository on GitHub
 - Create a demonstration branch
 - Cover how this is representative of a example production environment
 - Generate a component definition
@@ -24,11 +24,9 @@ This repository represents an example of how you would automate governance in a 
 - Store the results in the repository, commit, review with new threshold
 
 #### Demonstrate Continuous Assessment
-- Uncomment the sample webapp from the zarf.yaml
-- Commit and Review the PR output
-- Introduce a non-compliant state - uncomment the pod label for disabling istio injection
-- Commit and Review the PR output
-- Fix, commit, review the PR output
+- Uncomment the sample webapp from the zarf.yaml (non-complaint by default)
+- Commit and Review the PR output (failing)
+- Fix, commit, review the PR output (passing)
 
 
 ## Component Generation
@@ -40,10 +38,10 @@ lula generate component -c https://raw.githubusercontent.com/usnistgov/oscal-con
 Add the following links to an `implemented-requirement` in order for Lula to provide validation
 ```yaml
 links:
-  - href: file:./validations/validations.yaml
+  - href: file:./validations/validation.yaml
     rel: lula
     resource-fragment: '#07b19199-d4b6-42b7-8130-633c51517279'
-  - href: file:./validations/validations.yaml
+  - href: file:./validations/validation.yaml
     rel: lula
     resource-fragment: '#96cd25e3-fdfa-451e-8dbd-3fb2ff211d40'
 ```
