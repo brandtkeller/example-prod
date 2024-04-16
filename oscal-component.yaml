@@ -1,0 +1,34 @@
+component-definition:
+  components:
+    - control-implementations:
+        - description: Control Implementation Description
+          implemented-requirements:
+            - control-id: ac-3
+              description: <how the specified control may be implemented if the containing component or capability is instantiated in a system security plan>
+              remarks: Enforce approved authorizations for logical access to information and system resources in accordance with applicable access control policies.
+              uuid: 8a325a3f-f696-43d4-87c2-e940891b254b
+            - control-id: ac-4
+              description: <how the specified control may be implemented if the containing component or capability is instantiated in a system security plan>
+              remarks: 'Enforce approved authorizations for controlling the flow of information within the system and between connected systems based on [Assignment: organization-defined information flow control policies].'
+              uuid: d3430fa0-e370-4f77-b855-d51f30abc7d9
+              links:
+                - href: file:./validations/validations.yaml
+                  rel: lula
+                  resource-fragment: '#07b19199-d4b6-42b7-8130-633c51517279'
+                - href: file:./validations/validations.yaml
+                  rel: lula
+                  resource-fragment: '#96cd25e3-fdfa-451e-8dbd-3fb2ff211d40'
+          source: https://raw.githubusercontent.com/usnistgov/oscal-content/master/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json
+          uuid: a3039927-839c-5745-ac4e-a9993bcd60ed
+      description: Component Description
+      title: Software Title
+      type: software
+      uuid: 39378b76-4a59-4afc-880f-460ea7e6215c
+  metadata:
+    last-modified: 2024-04-16T21:23:13.775532806Z
+    oscal-version: 1.1.2
+    published: 2024-04-16T21:23:13.775532806Z
+    remarks: Lula Generated Component Definition
+    title: Component Title
+    version: 0.0.1
+  uuid: aec1693d-105f-45eb-8dea-e1583f5ee51f
