@@ -32,7 +32,7 @@ jobs:
       # - name: Setup Lula
       #   uses: defenseunicorns/lula/setup@095636b7880051e11b05f10a582fdd911526161c
       #   with:
-      #     version: v0.2.0
+      #     version: v0.2.1
 
       # - name: Perform Validation of OSCAL
       #   uses: defenseunicorns/lula/validate@095636b7880051e11b05f10a582fdd911526161c
