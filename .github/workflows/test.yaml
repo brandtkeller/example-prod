@@ -1,9 +1,13 @@
 name: Test Governance
+<<<<<<< HEAD
 on:
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+=======
+on: pull_request
+>>>>>>> dbcf03775132ea13c400a1bc86c4cf6123206e6f
 
 permissions:
   contents: read
