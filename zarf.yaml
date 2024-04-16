@@ -21,15 +21,15 @@ components:
       - "docker.io/istio/pilot:1.20.3-distroless"
       - "docker.io/istio/proxyv2:1.20.3-distroless"
 
-  - name: my-webapp
-    required: true
-    manifests:
-    - name: webapp-ns
-      files:
-      - "manifests/namespace.yaml"
-    - name: webapp-deployment
-      namespace: webapp
-      files:
-      - "manifests/webapp-deployment.yaml"
-    images:
-    -  "docker.io/nginx:1.25.4"
+  # - name: my-webapp
+  #   required: true
+  #   manifests:
+  #   - name: webapp-ns
+  #     files:
+  #     - "manifests/namespace.yaml"
+  #   - name: webapp-deployment
+  #     namespace: webapp
+  #     files:
+  #     - "manifests/webapp-deployment.yaml"
+  #   images:
+  #   -  "docker.io/nginx:1.25.4"

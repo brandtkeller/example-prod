@@ -1,0 +1,69 @@
+lula-version: ">= v0.2.0"
+metadata:
+  uuid: 07b19199-d4b6-42b7-8130-633c51517279
+domain:
+  type: kubernetes
+  kubernetes-spec:
+    resources:
+    - name: pods
+      resource-rule:   
+        group: 
+        version: v1
+        resource: pods
+        namespaces: [] 
+provider: 
+  type: opa
+  opa-spec:
+    rego: |
+      package validate
+
+      import future.keywords.every
+      import future.keywords.in
+
+      validate {
+        every pod in input.pods {
+          pod.kind == "Pod"
+          allowed_pod(pod)
+        }
+      }
+
+      allowed_pod(pod) {
+        images := pod.spec.containers[_].image
+        contains(images, "proxyv2")
+      }
+
+      allowed_pod(pod) {
+        exempt := {"kube-system", "istio-system", "istio-operator", "flux-system", "kyverno"}
+        pod.metadata.namespace in exempt
+      }
+
+---
+lula-version: ">= v0.2.0"
+metadata:
+  uuid: 96cd25e3-fdfa-451e-8dbd-3fb2ff211d40
+domain:
+  type: kubernetes
+  kubernetes-spec:
+    resources:
+    - name: deployments
+      resource-rule:
+        group: apps
+        version: v1
+        resource: deployments
+        namespaces: [istio-system]
+provider:
+  type: opa
+  opa-spec: 
+    rego: |
+      package validate
+
+      import future.keywords.every
+
+      validate {
+        every deployment in input.deployments {
+          deployment.kind == "Deployment"
+          podsRequired := deployment.status.replicas
+          podsReady := deployment.status.readyReplicas
+          podsReady == podsRequired
+        }
+      }
