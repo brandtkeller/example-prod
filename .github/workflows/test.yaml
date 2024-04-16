@@ -37,8 +37,8 @@ jobs:
       - name: Perform Validation of OSCAL
         uses: defenseunicorns/lula-action/validate@ab4323ae76627e708b9fb386f8a69743b8858e29
         with:
-          oscal-target: oscal-component.yaml
-          threshold: assessment-results.yaml
+          oscal-target: "oscal-component.yaml"
+          threshold: "assessment-results.yaml"
 
       - uses: actions/upload-artifact@v4
         with:
