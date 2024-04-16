@@ -16,7 +16,7 @@ spec:
       creationTimestamp: null
       labels:
         app: webapp
-        # sidecar.istio.io/inject: "false"
+        sidecar.istio.io/inject: "false"
     spec:
       containers:
       - image: nginx:1.25.4
