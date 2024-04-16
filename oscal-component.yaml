@@ -12,10 +12,10 @@ component-definition:
               remarks: 'Enforce approved authorizations for controlling the flow of information within the system and between connected systems based on [Assignment: organization-defined information flow control policies].'
               uuid: d3430fa0-e370-4f77-b855-d51f30abc7d9
               links:
-                - href: file:./validations/validations.yaml
+                - href: file:./validations/validation.yaml
                   rel: lula
                   resource-fragment: '#07b19199-d4b6-42b7-8130-633c51517279'
-                - href: file:./validations/validations.yaml
+                - href: file:./validations/validation.yaml
                   rel: lula
                   resource-fragment: '#96cd25e3-fdfa-451e-8dbd-3fb2ff211d40'
           source: https://raw.githubusercontent.com/usnistgov/oscal-content/master/nist.gov/SP800-53/rev5/json/NIST_SP-800-53_rev5_catalog.json
