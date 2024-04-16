@@ -29,6 +29,9 @@ jobs:
       - name: Check on the environment
         run: zarf tools kubectl get pods -A
 
+      - name: Check that the validations exist
+        run: cat ./validations/validations.yaml
+
       - name: Setup Lula
         uses: defenseunicorns/lula-action/setup@a0118c71f7182755c97e2275da2d2dc49f91db5e
         with:
