@@ -1,0 +1,64 @@
+assessment-results:
+  import-ap:
+    href: ""
+  metadata:
+    last-modified: 2024-04-17T15:36:01.343899508Z
+    oscal-version: 1.1.2
+    published: 2024-04-17T15:36:01.343899508Z
+    remarks: Assessment Results generated from Lula
+    title: '[System Name] Security Assessment Results (SAR)'
+    version: 0.0.1
+  results:
+    - description: Assessment results for performing Validations with Lula version v0.2.1
+      findings:
+        - description: <how the specified control may be implemented if the containing component or capability is instantiated in a system security plan>
+          related-observations: []
+          target:
+            status:
+              state: not-satisfied
+            target-id: ac-3
+            type: objective-id
+          title: 'Validation Result - Component:f2b0a3bf-898c-499d-8fad-131eb9d525fa / Control Implementation: a3039927-839c-5745-ac4e-a9993bcd60ed / Control:  ac-3'
+          uuid: 54e76581-2e2f-4d9e-a287-bcd99d2b7c14
+        - description: <how the specified control may be implemented if the containing component or capability is instantiated in a system security plan>
+          related-observations:
+            - observation-uuid: 01f3e002-3760-4047-85e9-557a292f8583
+            - observation-uuid: 650362ef-dfbb-4dd5-b179-75b3dfc5f81a
+          target:
+            status:
+              state: satisfied
+            target-id: ac-4
+            type: objective-id
+          title: 'Validation Result - Component:f2b0a3bf-898c-499d-8fad-131eb9d525fa / Control Implementation: a3039927-839c-5745-ac4e-a9993bcd60ed / Control:  ac-4'
+          uuid: 0f9dcee7-501e-4150-b697-8ad1b5d6e691
+      observations:
+        - collected: 2024-04-17T15:36:01.329490317Z
+          description: |
+            [TEST] ac-4 - 07b19199-d4b6-42b7-8130-633c51517279
+          methods:
+            - TEST
+          relevant-evidence:
+            - description: |
+                Result: satisfied
+          uuid: 01f3e002-3760-4047-85e9-557a292f8583
+        - collected: 2024-04-17T15:36:01.329490317Z
+          description: |
+            [TEST] ac-4 - 96cd25e3-fdfa-451e-8dbd-3fb2ff211d40
+          methods:
+            - TEST
+          relevant-evidence:
+            - description: |
+                Result: satisfied
+          uuid: 650362ef-dfbb-4dd5-b179-75b3dfc5f81a
+      reviewed-controls:
+        control-selections:
+          - description: Controls Assessed by Lula
+            include-controls:
+              - control-id: ac-3
+              - control-id: ac-4
+        description: Controls validated
+        remarks: Validation performed may indicate full or partial satisfaction
+      start: 2024-04-17T15:36:01.343899508Z
+      title: Lula Validation Result
+      uuid: 5d52c961-3378-44b5-9727-91334e3e282e
+  uuid: b0731b85-12ba-46ef-b71d-ad2769122bfb
