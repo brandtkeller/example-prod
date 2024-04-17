@@ -29,18 +29,18 @@ jobs:
       - name: Check on the environment
         run: zarf tools kubectl get pods -A
 
-      # - name: Setup Lula
-      #   uses: defenseunicorns/lula-action/setup@a0118c71f7182755c97e2275da2d2dc49f91db5e
-      #   with:
-      #     version: v0.2.1
+      - name: Setup Lula
+        uses: defenseunicorns/lula-action/setup@a0118c71f7182755c97e2275da2d2dc49f91db5e
+        with:
+          version: v0.2.1
 
-      # - name: Perform Validation of OSCAL
-      #   uses: defenseunicorns/lula-action/validate@a0118c71f7182755c97e2275da2d2dc49f91db5e
-      #   with:
-      #     oscal-target: "oscal-component.yaml"
-      #     # threshold: "assessment-results.yaml"
+      - name: Perform Validation of OSCAL
+        uses: defenseunicorns/lula-action/validate@a0118c71f7182755c97e2275da2d2dc49f91db5e
+        with:
+          oscal-target: "oscal-component.yaml"
+          # threshold: "assessment-results.yaml"
 
-      # - uses: actions/upload-artifact@v4
-      #   with:
-      #     name: Assessment-Results
-      #     path: ~/.lula-cache/assessment-results.yaml
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Assessment-Results
+          path: ~/.lula-cache/assessment-results.yaml
